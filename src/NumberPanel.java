@@ -15,7 +15,6 @@ public class NumberPanel extends JPanel {
 			final int num = i;
 			JButton NumButton = new JButton (Integer.toString (num));
 			NumButton.addActionListener (new ActionListener () {
-				
 				@Override
 				public void actionPerformed (ActionEvent e) {
 					current_calc_state.writeDisplay (current_calc_state.readDisplay() + Integer.toString(num));

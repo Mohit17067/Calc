@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 
@@ -11,32 +10,27 @@ public class CalcFrame extends JFrame {
 
 	private JButton resultArea;
 	
-	public CalcFrame () {
-		setTitle ("Calculator");
-		setSize (300, 400);
+	public CalcFrame() {
+		setSize(300, 400);
 		setDefaultCloseOperation (EXIT_ON_CLOSE);
+		setLayout (new GridLayout(3, 1));
 		
-		setLayout(new GridLayout(3, 1));
-		
-		resultArea = new JButton ();
+		resultArea = new JButton ("");
 		resultArea.setEnabled(false);
 		resultArea.setBackground(Color.WHITE);
 		
-		//add (resultArea, BorderLayout.NORTH);
 		add (resultArea);
 		resultArea.setBorder(new EmptyBorder(10, 10, 10, 10));
 		
 		JPanel numPanel = new NumberPanel(this);
 		numPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-		//add (numPanel, BorderLayout.WEST);
 		add (numPanel);
 		
 		JPanel opPanel = new OperationPanel(this);
 		opPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-		//add (new OperationPanel (this), BorderLayout.CENTER);
 		add (opPanel);
 		
-		setVisible (true);
+		setVisible(true);
 	}
 	
 	public void writeDisplay (String expression) {
@@ -68,8 +62,7 @@ public class CalcFrame extends JFrame {
 		writeDisplay(Double.toString(result));
 	}
 	
-	public static void main (String[] args) {
-		CalcFrame newCalc = new CalcFrame ();
+	public static void main(String[] args) {
+		JFrame calcFrame = new CalcFrame();
 	}
-
 }
