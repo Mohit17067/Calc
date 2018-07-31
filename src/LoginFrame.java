@@ -23,6 +23,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 		JLabel useridLabel = new JLabel("User ID");
 		useridLabel.setBorder(new EmptyBorder(10, 10, 10, 10));
 		add (useridLabel);
+		
 		useridField = new JTextField();
 		useridField.setEditable(true);
 		useridField.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -31,6 +32,7 @@ public class LoginFrame extends JFrame implements ActionListener {
 		JLabel passwordLabel = new JLabel("Password");
 		passwordLabel.setBorder(new EmptyBorder(10, 10, 10, 10));;
 		add (passwordLabel);
+		
 		passwordField = new JPasswordField(20);
 		passwordField.setEditable(true);
 		passwordField.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -59,5 +61,4 @@ public class LoginFrame extends JFrame implements ActionListener {
 	public static void main(String[] args) {
 		JFrame loginFrame = new LoginFrame();
 	}
-
 }

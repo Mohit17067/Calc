@@ -12,10 +12,14 @@ private CalcFrame current_calc_state;
 
 	public OperationPanel (CalcFrame c) {
 		setLayout(new GridLayout(2, 3, 10, 10));
+		
 		current_calc_state = c;
+		
 		for (int i = 0; i < opers.length; i++) {
+			
 			final String op = opers[i];
 			JButton OpButton = new JButton (op);
+			
 			OpButton.addActionListener (new ActionListener () {
 				
 				@Override
@@ -31,8 +35,10 @@ private CalcFrame current_calc_state;
 					}
 				}
 			});
+			
 			add (OpButton);
 		}
+		
 		setVisible(true);
 	}
 }
