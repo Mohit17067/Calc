@@ -62,7 +62,7 @@ public class CalcFrame extends JFrame {
 		writeDisplay(Double.toString(result));
 	}
 	
-	public static void main(String[] args) {
-		JFrame calcFrame = new CalcFrame();
-	}
+	//public static void main(String[] args) {
+	//	JFrame calcFrame = new CalcFrame();
+	//}
 }
